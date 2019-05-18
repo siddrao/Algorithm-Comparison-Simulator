@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tutorial</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .para{
+            
+            font-family: sans-serif;
+            
+        }
+        
+        
+    </style>
+    
+</head>
+<body>
+
+    <div class='para'>
+            <h1 style='background-color: #00FFFF'  >Routing Algorithms</h1>
+            <p>The purpose of routing algorithms is to find a path has the least cost in a network of nodes that are linked to
+each other. Routing algorithms are broadly classified into two types namely global and decentralized. The
+algorithm that finds the least cost path while having global state information is also known as Link State algorithms
+while the Distance Vector algorithm is a decentralized algorithm that finds the least cost path iteratively without
+ having the global information at the start.</p>
+      
+     </div>
+    <div>
+        <h3 >Link State Routing</h3>
+        <p>The basic idea behind Link State routing is very simple wherein it consists of two phases. Initially in the first phase
+starts with each node knowing the cost to its neighbors and ends with each node knowing the entire network.
+Then in the second phase, with the use of the algorithm, each node calculates the optimal least cost path as every
+other node. The Link State routing algorithm that the users will learn in this simulator is the Dijkstra’s Algorithm.</p>
+<video width="320" height="240" controls>
+        <source src="D:\Siddhant\Old PC\SID\NetBeansProjects\WLS\src\tut videos\Link State.webm" >
+        
+    </video>
+<br>
+<h4>Dijkstra's Algorithm</h4>
+If there are n nodes in the network, Dijkstra’s algorithm will calculate the least cost paths to the n nodes by the nth
+iteration. A major disadvantage of the algorithm is the fact that it does a blind search thereby consuming a lot of
+time. Also, it cannot handle negative edges which lead to acyclic graphs and if negative edges are present it most
+often cannot obtain the right shortest path.</p>
+    <video width="320" height="240" controls>
+        <source src="D:\Siddhant\Old PC\SID\NetBeansProjects\WLS\src\tut videos\Dijkstra.webm" >
+        
+    </video>
+    </div>
+    <div>
+        <h3>Distance Vector Routing</h3>
+        <p>
+            Distance Vector Routing is a routing protocol used in packet-switched networks. It is used to measure the distance
+between nodes so that the best path for packet transmission can be determined. Distance is usually measured in
+terms of hops, where each router counts as a single hop. In this, each router maintains a routing table which
+consists of a number of hops to every other node in the network. It is also required that each router informs its
+neighbors periodically, about the topological changes in the network.</p>
+        <video width="320" height="240" controls>
+            <source src="D:\Siddhant\Old PC\SID\NetBeansProjects\WLS\src\tut videos\Distance Vector.webm" >
+            
+        </video>
+<br>
+        <h4>Bellman Ford Algorithm</h4>
+
+        
+        <video width="320" height="240" controls>
+        <source src="D:\Siddhant\Old PC\SID\NetBeansProjects\WLS\src\tut videos\Bellman Ford.webm" >
+        
+        </video>
+        </p>
+    </div>
+    <div>
+        <p>
+           The differences in the algorithms can be seen based on the parameters like: Message
+            Complexity, Robustness, Speed of convergence
+            <ul>
+                <li><b>Message Complexity</b> – Message complexity denotes the maximum number of messages transmitted over any
+            edge. Initially, nodes send messages to each other and get to know the cost to reach the nodes. If the cost of an
+            edge between two nodes changes, the new edge cost has to be sent to all nodes. Dijkstra’s algorithm being a
+            global routing algorithm informs the change to all the nodes . As the Bellman Ford algorithm only exchanges
+            messages between directly connected neighbors, communicating the change in cost requires transmission of a lot
+            more messages than Dijkstra’s algorithm. </li>
+            
+            
+                <li><b>Speed of Convergence</b> – Speed of convergence of an algorithm simply means the time required to find the shortest
+            path from a source node to destination. As Dijkstra’s can calculate the least cost path in n iterations, its speed of
+            convergence is more, meaning it will take less time to calculate the path. In Bellman Ford nodes will take a lot of
+            time to inform each other about the costs and hence this algorithm converges slowly. Speed of convergence of
+            the algorithms can be seen with continuously updating the cost to reach each node which will be shown in a table.
+           </li>
+            
+            
+                <li><b>Robustness</b> – Simulating robustness of algorithms is nothing but showing how they will adapt in case of a node
+                failure. </li>
+            </ul>
+        </p>
+        <video width="320" height="240" controls>
+        <source src="D:\Siddhant\Old PC\SID\NetBeansProjects\WLS\src\tut videos\compare1.webm" >
+        
+        </video>
+    </div>
+</body>
+</html>

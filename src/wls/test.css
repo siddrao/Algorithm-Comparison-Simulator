@@ -1,0 +1,18 @@
+node {
+	size-mode: fit;
+	shape:rounded-box;
+	text-style: bold;
+	text-color: white;
+	text-size:13;
+	padding: 5px, 4px;
+	text-offset: 0px, 5px;
+	
+}
+
+
+edge {
+	shape:cubic-curve;
+        arrow-shape: arrow;
+	text-size: 15;
+	text-offset: 10px, 10px;
+}
